@@ -1,3 +1,7 @@
+Himanshu Goyal
+21105029
+ECE
+
 *************** Solution 1 ******************
 a.
 Lenght of the string is: 36
