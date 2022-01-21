@@ -1,4 +1,4 @@
-------------------------------------------------------------------------------------------
+
 print("*************** Solution 1 ******************")
 input="Python is a case sensitive lanaguage"
 print("a.")
@@ -16,9 +16,9 @@ sub_str="a"
 print("Index of first occurrence of substring \"a\" is: %s" %input.find("a") )
 print("f.")
 print("String without white spaces is: %s" %input.replace(" ",""))
-------------------------------------------------------------------------------------------
 
-------------------------------------------------------------------------------------------
+
+
 print("*************** Solution 2 ******************")
 name="Himanshu Goyal"       #Assigning Variables
 SID=21105029
@@ -27,10 +27,9 @@ CGPA=9.8
 print("""Hey, %s Here!
 My SID is %s
 I am from %s department and my CGPA is %s """ %(name,SID,department_name,CGPA))
-------------------------------------------------------------------------------------------
 
 
-------------------------------------------------------------------------------------------
+
 print("*************** Solution 3 ******************")
 a=56
 b=10
@@ -44,11 +43,11 @@ print("d...")
 print("Left shifting a and b with 2 bits: a = %d b = %d"%(a<<2,b<<2))
 print("e...")
 print("Right shifting a with 2 bits and b with 4 bits: a = %d b = %d"%(a<<2,b<<4))
-------------------------------------------------------------------------------------------
 
 
 
-------------------------------------------------------------------------------------------
+
+
 print("*************** Solution 4 ******************")
 input_numbers=input("Enter the numbers (in \" \"): ").split()
 i=0
@@ -57,20 +56,18 @@ while i < len(input_numbers):
     i+=1 #increasing i by 1
 
 print("The greatest number among the entered numbers is %s\n" % max(input_numbers))
-------------------------------------------------------------------------------------------
 
 
-------------------------------------------------------------------------------------------
 print("*************** Solution 5 ******************")
 str=input("Enter desired string(in ' ') ")
 if "name" in str:
     print("YES")
 else:
     print("NO")
-------------------------------------------------------------------------------------------
+
     
     
--------------------------------------------------------------------------------------------
+
 print("*************** Solution 6 ******************")
 sides=input("Enter sides of triangles(in ' ') ").split()
 sorted(sides)   # sorting
@@ -78,4 +75,4 @@ if int(sides[2])<(int(sides[1]) + int(sides[0])):   #checking condition
     print("YES")
 else:
     print("NO")
----------------------------------------------------------------------------------------------
+
