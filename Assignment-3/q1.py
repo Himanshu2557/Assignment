@@ -10,4 +10,4 @@ for x in str:
         count[x]=1
 print("The count of:")
 for j in count:
-    print("\t'\033[1m%s\033[0m\' : %d"%(j,count[j]))
+    print("\t'\033[1m%s\033[0m' : %d"%(j,count[j]))

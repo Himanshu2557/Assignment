@@ -10,7 +10,7 @@ for x in str:
         count[x]=1
 print("The count of:")
 for j in count:
-    print("\t'\033[1m%s\033[0m\' : %d"%(j,count[j]))
+    print("\t'\033[1m%s\033[0m' : %d"%(j,count[j]))
 
 
 print("------------ SOLUTION 2 ------------")
@@ -63,7 +63,6 @@ for i in list:
 
 print(Desired_list)
 
-
 print("------------ SOLUTION 4 ------------")
 
 letter_grade={4:"D",5:'C',6:'C+',7:'B',8:'B+',9:'A',10:'A+'}  # Dictonary with key as grade and letter as value
@@ -95,7 +94,7 @@ for i in range(0,n): # Loop for columns
     print("") ## for going to next line after completing one row
 
 
-    print("------------ SOLUTION 6 ------------")
+print("------------ SOLUTION 6 ------------")
 next_student="Y"
 details={} #empty dict to contain SID and name
 name=[] # list of names
@@ -131,13 +130,12 @@ for i in sorted(details.keys()):
 print(sorted_SID_dict)
 
 print("-->D")
-print(details[int(input("Enter student SID "))]) #searching name using SID in dict
-
+print("Name of student is %s" %details[int(input("Enter student SID "))]) #searching name using SID in dict
 
 
 print("------------ SOLUTION 7 ------------")
 # FIBONACCI SEQUENCE
-n=int(input("Enter no. of terms till which Fibonacci sequence is to be printed "))
+n=int(input("Enter no. of terms till which Fibonacci sequence is to be printed: "))
 first_term=0  # Initial terms for Sequnece
 second_term=1
 sum=0.0

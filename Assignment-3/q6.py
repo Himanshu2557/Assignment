@@ -34,4 +34,4 @@ for i in sorted(details.keys()):
 print(sorted_SID_dict)
 
 print("-->D")
-print(details[int(input("Enter student SID "))]) #searching name using SID in dict
+print("Name of student is %s" %details[int(input("Enter student SID "))]) #searching name using SID in dict

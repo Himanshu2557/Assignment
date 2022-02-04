@@ -1,6 +1,6 @@
 print("------------ SOLUTION 7 ------------")
 # FIBONACCI SEQUENCE
-n=int(input("Enter no. of terms till which Fibonacci sequence is to be printed "))
+n=int(input("Enter no. of terms till which Fibonacci sequence is to be printed: "))
 first_term=0  # Initial terms for Sequnece
 second_term=1
 sum=0.0
@@ -11,3 +11,5 @@ for i in range (0,n):
     second_term=sequnece    #updating second term to next term
     sum+=first_term      # Sum of all terms of series
 print(("Average Of sequence is %f" %(sum/n)))
+
+

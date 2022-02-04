@@ -1,4 +1,4 @@
-print("------------ SOLUTION 4 ------------")
+print("------------ SOLUTION 5 ------------")
 print("For pattern in question enter 6")
 n=int(input("Enter number of columns (From 0-13) ")) #Taking number of desired columns as input
 for i in range(0,n): # Loop for columns
