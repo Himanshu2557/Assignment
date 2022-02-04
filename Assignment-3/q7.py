@@ -1,6 +1,6 @@
 print("------------ SOLUTION 7 ------------")
 # FIBONACCI SEQUENCE
-n=int(input("Enter n till which Fibonacci sequence is to be printed "))
+n=int(input("Enter no. of terms till which Fibonacci sequence is to be printed "))
 first_term=0  # Initial terms for Sequnece
 second_term=1
 sum=0.0

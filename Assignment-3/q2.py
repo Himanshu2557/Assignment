@@ -35,5 +35,5 @@ else:
     else:
         Month+=1
 
-print("Next Date is: %d/%d/%d"%(day,Month,year))
+print("Next Date is: \033[1m%d/\033[1m%d/\033[1m%d"%(day,Month,year))
 
