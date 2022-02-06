@@ -15,19 +15,30 @@ for j in count:
 
 print("------------ SOLUTION 2 ------------")
 
-day = int(input("Day - "))
-Month = int(input("Month - "))
-year=int(input("Year - ")) #Taking year as integer input
+def leap_year(year=False):                                                                                
+    if (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0): #check for leap year
+        return True
+    else:
+        return False
 
-if year%4==0: 
-    leap_year=1          #Checking for leap year
-    if year%400==0:     #leap year is divisible by 4 but not by 100 but by 400
-        leap_year=1
-    elif year%100==0:
-        leap_year=0 
-else:
-    leap_year=0
-
+while True:
+    day = int(input("Day - "))
+    Month = int(input("Month - "))
+    year = int(input("Year - "))
+    if (day < 1) or (day > 31) or (Month < 1) or (Month > 12) or (year < 1800) or (year > 2025):                  #Checking validity of date
+        print("Please use the given conditions for entering the current date\n1<=month<=12\n1<=day<=31\n1800<=year<=2025")
+        continue
+    if Month in (4,6,9,11) and day == 31:                                                                          #Checkingfor 31 days in a 30 day month
+        print("The given month has only 30 days\nEnter a valid date")
+        continue
+    elif Month == 2 and day >= 29:                                                                                 #Checking for no. of days in February
+        if leap_year(year) and day != 29:
+            print("The given month has only 29 days\n\Enter a valid date")
+            continue
+        elif not leap_year(year):
+            print("The given month has only 28 days\nEnter a valid date")
+            continue
+    break
 
 if Month in (1,3,5,7,8,10,12):  #number of days in month
     month_lenght=31
@@ -50,7 +61,7 @@ else:
     else:
         Month+=1
 
-print("Next Date is: \033[1m%d/\033[1m%d/\033[1m%d"%(day,Month,year))
+print("Next Date is: %d/%d/%d"%(day,Month,year))
 
 
 print("------------ SOLUTION 3 ------------")
