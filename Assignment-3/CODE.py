@@ -169,7 +169,7 @@ set4=(set1^set2)  #Taking symmetric difference
 print(set4)
 
 print("-->B")
-set5=((set1|set2|set3)-((set1&set2)|(set2&set3)|(set3&set1)))#difference of union of 3 sets with elements that occour in atleast two set
+set5=set1^set2^set3
 print(set5)
 
 print("-->C")
