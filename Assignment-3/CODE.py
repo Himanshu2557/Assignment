@@ -95,8 +95,13 @@ else:
 
 
 print("------------ SOLUTION 5 ------------")
-print("For pattern in question enter 6")
-n=int(input("Enter number of columns (From 0-13) ")) #Taking number of desired columns as input
+print("TO GET PATTERN IN QUESTION ENTER 6 ELSE ENTER ANY NUMBER b/w 1,13")
+while(True):
+    n=int(input("Enter number of columns (From 1-13) ")) #Taking number of desired columns as input
+    if n in range(1,14):
+        break
+    else:
+        print("Error")
 for i in range(0,n): # Loop for columns
     for j in range(0,i+1): #loop for spaces in each columns
         print(" "),
@@ -146,7 +151,12 @@ print("Name of student is %s" %details[int(input("Enter student SID "))]) #searc
 
 print("------------ SOLUTION 7 ------------")
 # FIBONACCI SEQUENCE
-n=int(input("Enter no. of terms till which Fibonacci sequence is to be printed: "))
+while(True):
+    n=int(input("Enter no. of terms till which Fibonacci sequence is to be printed: "))
+    if(n>0):
+        break
+    else:
+        print("error")
 first_term=0  # Initial terms for Sequnece
 second_term=1
 sum=0.0
@@ -157,6 +167,7 @@ for i in range (0,n):
     second_term=sequnece    #updating second term to next term
     sum+=first_term      # Sum of all terms of series
 print(("Average Of sequence is %f" %(sum/n)))
+
 
 
 print("------------ SOLUTION 8 ------------")
