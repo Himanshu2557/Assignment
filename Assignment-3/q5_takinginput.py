@@ -1,6 +1,11 @@
 print("------------ SOLUTION 5 ------------")
-print("For pattern in question enter 6")
-n=int(input("Enter number of columns (From 0-13) ")) #Taking number of desired columns as input
+print("TO GET PATTERN IN QUESTION ENTER 6 ELSE ENTER ANY NUMBER b/w 1,13")
+while(True):
+    n=int(input("Enter number of columns (From 1-13) ")) #Taking number of desired columns as input
+    if n in range(1,14):
+        break
+    else:
+        print("Error")
 for i in range(0,n): # Loop for columns
     for j in range(0,i+1): #loop for spaces in each columns
         print(" "),

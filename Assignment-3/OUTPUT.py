@@ -46,27 +46,27 @@ Enter grade (between 4 and 10): 9
 Your Grade is A and Excellent
 
 ------------ SOLUTION 5 ------------
-For pattern in question enter 6
-Enter number of columns (From 0-13) 6
+TO GET PATTERN IN QUESTION ENTER 6 ELSE ENTER ANY NUMBER b/w 1,13
+Enter number of columns (From 1-13) 6
   A B C D E F G H I J K 
     A B C D E F G H I 
       A B C D E F G 
         A B C D E 
           A B C 
-            A 
+            A  
            
-For pattern in question enter 6
-Enter number of columns (From 0-13) 10
-  A B C D E F G H I J K L M N O P Q R S 
-    A B C D E F G H I J K L M N O P Q 
-      A B C D E F G H I J K L M N O 
-        A B C D E F G H I J K L M 
-          A B C D E F G H I J K 
-            A B C D E F G H I 
-              A B C D E F G 
-                A B C D E 
-                  A B C 
-                    A
+Enter number of columns (From 1-13) 11
+  A B C D E F G H I J K L M N O P Q R S T U 
+    A B C D E F G H I J K L M N O P Q R S 
+      A B C D E F G H I J K L M N O P Q 
+        A B C D E F G H I J K L M N O 
+          A B C D E F G H I J K L M 
+            A B C D E F G H I J K 
+              A B C D E F G H I 
+                A B C D E F G 
+                  A B C D E 
+                    A B C 
+                      A
                     
 ------------ SOLUTION 6 ------------
 Enter name of student 'Himanshu Goyal'
