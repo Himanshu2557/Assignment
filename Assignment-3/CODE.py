@@ -180,7 +180,7 @@ set4=(set1^set2)  #Taking symmetric difference
 print(set4)
 
 print("-->B")
-set5=set1^set2^set3
+set5=set1^set2^set3 #Symmetric difference of all 3 sets
 print(set5)
 
 print("-->C")
