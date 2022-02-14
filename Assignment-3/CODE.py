@@ -104,9 +104,9 @@ while(True):
         print("Error")
 for i in range(0,n): # Loop for columns
     for j in range(0,i+1): #loop for spaces in each columns
-        print(" "),
+        print(" ",end="")
     for k in range(0,2*(n-i)-1): #loop for character in each columns
-        print(chr((65+k))),
+        print(chr((65+k)),end="")
     print("") ## for going to next line after completing one row
 
 
