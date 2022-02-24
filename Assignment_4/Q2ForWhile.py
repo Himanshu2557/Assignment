@@ -8,7 +8,7 @@ while True:
 # printng the sequence
 for i in range(0,n):  # Loop for iteration rows
     for j in range(0,n-i): # Loop for printng space before first elemrent of ith row
-        print(" "),
+        print(" ",end=" ")
     for k in range(0,i+1): # Loop for printing element if ith row
         factoriali=1
         factorialk=1
@@ -19,6 +19,6 @@ for i in range(0,n):  # Loop for iteration rows
             factorialk*=m
         for m in range(1,(i-k)+1): #finding factorial of (i-k)
             factorialik*=m
-        print(" %d "%(factoriali/(factorialik*factorialk))), # print iCk ie. kth element of ith row
+        print(" %d "%(factoriali/(factorialik*factorialk)),end=" ") # print iCk ie. kth element of ith row
 
     print(" ")

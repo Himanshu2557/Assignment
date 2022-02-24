@@ -17,7 +17,7 @@ while True:
 
 for i in range(0,n):
     for j in range(0,n-i):  # Loop for printng space before first elemrent of ith row
-        print(" "),
+        print(" ",end=" ")
     for k in range(0,i+1):
-        print(" %d " %(nCr(i,k))), # print iCk ie. kth element of ith row
+        print(" %d " %(nCr(i,k)),end=" ") # print iCk ie. kth element of ith row
     print(" ") # For moving to next row
