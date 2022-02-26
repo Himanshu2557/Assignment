@@ -1,3 +1,4 @@
+print('--------------------Question-5---------------------')
 #Creating class
 class employee:
     # INITIALIZATION
@@ -10,6 +11,7 @@ class employee:
         print(f"Employee Name: {self.name}")
         print(f"Employee Salary: {self.salary} ")
         print("")
+
 
 # Creating objects
 employee1=employee("Mehak",40000)
@@ -25,7 +27,11 @@ employee3.info()
 employee1.salary=70000
 
 #Printing updated info of Mehak
-employee1=employee("Mehak",40000)
+print("Updated record of Mehak")
+employee1.info()
 
 # Deleting record of Viren
 del employee3
+print("Record of Viren deleted")
+
+
