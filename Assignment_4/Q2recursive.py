@@ -1,3 +1,6 @@
+print('--------------------Question-2---------------------')
+print('Using recucsion')
+
 # Function to find factorial of a number
 def factorial(n): 
     if n==0:      #base case 0! = 1

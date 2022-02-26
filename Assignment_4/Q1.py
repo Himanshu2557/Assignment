@@ -1,10 +1,11 @@
+print('--------------------Question-1---------------------')
+
 # Creation function to print steps to transfer disc from A to C
 def TowerOfHanoi(n,source,destination,helper):
 
     # Base Case
     if n==0:
         return
-
 # Firstly moving n-1 disc to B using C
     TowerOfHanoi(n-1,source,helper,destination)
 
@@ -16,4 +17,6 @@ def TowerOfHanoi(n,source,destination,helper):
 
 
 # calling Function For 3 Disc
-TowerOfHanoi(3,'A','B','C')
+TowerOfHanoi(3,'A','C','B')
+
+

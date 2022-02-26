@@ -1,3 +1,4 @@
+print("Using loops")
 # Taking Input and ensuring it is greater than 0
 while True:
     n=int(input("Enter Number of rows: "))
