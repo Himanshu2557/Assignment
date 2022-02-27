@@ -32,17 +32,20 @@ Enter Number of rows: 8
 
 --------------------Question-3---------------------
 Enter FIRST INTEGER: 10
-Enter SECOND INTEGER: 5
+Enter SECOND INTEGER: 2
 
-Quotient: 2
+Quotient: 5
 Remainder: 0
 
-One value is zero
-
-{8, 5, 6, 7}
-
-Maximum value in set is 8
-Hash value:  8
+a. The quotient and reminder are a callable values.
+False
+False
+b. One value is zero
+c. Filterd Values
+{5, 6, 9, 10, 11}
+d. Immutable set: frozenset({5, 6, 9, 10, 11})
+e. Maximum value in set is 11
+f. Hash value:  11
 
 --------------------Question-4---------------------
 Object created
