@@ -1,10 +1,10 @@
 print('--------------------Question-6---------------------')
 
-#inputting a word from the first friend
-word = input("Enter the first word: ")
+#inputting a word 
+word = input("Enter the Word: ").lower()
 
 #inputting a meaningful word with the exact same letters
-testword = input("\nEnter a new meaningful word to test your friendship: ")
+testword = input("\nEnter a MEANINGFUL word to test your friendship: ").lower()
 
 #defining dictionary from last assignment
 def count_in_dict(word):
@@ -22,16 +22,5 @@ def count_in_dict(word):
 #test to verify the letters of the new word
 if count_in_dict(word) != count_in_dict(testword):
     print("The letters aren't exact, friendship is fake!!")
-
-#shopkeeper's input to verify the word's meaning
-def userinput():
-    ans = input("\n{For the Shopkeeper}\nDoes the word makes sense?(y or n)\n").lower()
-
-    if ans == 'y':
-        print("The friends pass the friendship test!!\n\n")
-    elif ans == 'n':
-        print("The word doesn't have a meaning, friendship is fake!!\n\n")
-    else:
-        print("Invalid input, try again")
-        userinput()
-userinput()
+else:
+    print("The word does have a meaning and letters are exact, friendship is not fake!!")
