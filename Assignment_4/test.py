@@ -1,34 +1,42 @@
-a=int(input("Enter the first integer: "))
-b=int(input("Enter the first integer: "))
-c=a%b
-d=a//b
-print("Remainder is: ", c)
-print("Quotient is: ",d)
-if(c!=0):
-    if (d!=0):
-        print("Both values are non zero")
-    else:
-        print("One value is zero")
-else:
-    if (d!=0):
-        print("One value is zero")
-    else:
-        print("Both values are zero")
-set1=set()
-for i in range (4,7):
-    f=c+i
-    g=d+i
-    if(f>4):
-        set1.add(f)
-        print(set1)
-    if(g>4):
-        set1.add(g)
-        print(set1)
+#Answer 3
+print("\n\nAnswer 3.")
 
-print(set1)
-set2=frozenset(set1)
-print("Immutable set: ", frozenset(set1))
-print("Largest value in the set: ", max(set2))
-k=max(set2)
-print("Hash value: ", hash(k))
-print("")
+int1, int2 = map(int,input("Enter 2 numbers: ").split())
+
+quo = int1 // int2
+rem = int1 % int2
+
+print(f"The quotient is {quo} and reminder is {rem}")
+
+#part a
+print("a. The quotient and reminder is a callable value.")
+print(callable(quo))
+print(callable(rem))
+
+#part b
+if quo == 0:
+    print("b. The quotient is zero")
+if rem == 0:
+    print("b. The reminder is zero")
+if quo != 0 and rem != 0:
+    print("b. All the values are non zero")
+
+#part c
+clist = (quo , rem) + (4, 5, 6)
+
+result = []
+for i in range(len(clist)):
+    if clist[i] < 5:
+        result.append(clist[i])
+print(f"c. Filtered out numbers: {result}")
+
+#part d
+setresult = set(result)
+print("d. Set:",setresult)
+
+#part e
+setfrozen = frozenset(setresult)
+print("e. Immutable set:",setfrozen)
+
+#part f
+print("f. Hash value of the max value from the above set:", hash(max(setfrozen)))

@@ -10,10 +10,9 @@ class student:
         
 # Creating object
 s1=student("Himanshu Goyal",21105029)
-print("Object created")
-print()
-print(f"Name of student is {s1.name} and Roll No is {s1.rollno}")
-print()
+print("Object created\n")
+
+print(f"Name of student is {s1.name} and Roll No is {s1.rollno}\n")
 
  # deleting object
 del s1

@@ -9,8 +9,14 @@ rem=n1%n2
 quot=int(n1/n2)
 
 print("Quotient: %d" %quot)
-print("Remainder: %d" %rem)
-print()
+print("Remainder: %d\n" %rem)
+
+# Callable value
+print("a. The quotient and reminder are a callable values.")
+print(callable(quot))
+print(callable(rem))
+
+print("b. ",end="")
 # Cheking zero value 
 if(rem==0):
     if(quot==0):
@@ -20,8 +26,9 @@ if(rem==0):
 else:
     if(quot==0):
         print("One value is zero")
-print()
+
 # Set
+print("c. Filterd Values")
 reqset=set()
 for i in range (4,7):
     newrem=rem+i
@@ -32,14 +39,13 @@ for i in range (4,7):
     if(newquot>4):
         reqset.add(newquot)
 print(reqset)
-print()
-        
 
 immutableset=frozenset(reqset)
+print("d. Immutable set:",immutableset)
 
 maximum=max(immutableset)
-print("Maximum value in set is %d" %maximum)
-print("Hash value: ", hash(maximum))
+print("e. Maximum value in set is %d" %maximum)
+print("f. Hash value: ", hash(maximum))
 
 
 
