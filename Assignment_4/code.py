@@ -74,53 +74,60 @@ for i in range(0,n):  # Loop for iteration rows
     print(" ")
 
 print('--------------------Question-3---------------------')
-# Taking Input
-n1=int(input("Enter FIRST INTEGER: "))
-n2=int(input("Enter SECOND INTEGER: "))
+# Taking input
+int1=int(input("Enter First Integer: "))
+
+while(True):
+    int2=int(input("Enter Second Integer: "))
+    if int2!=0:
+        break
+    else:
+        print("Divisor Cannot be Zero\n Pleade enter second integer again\n")
+# DIVMOD
+solution=divmod(int1,int2)
+print(f"\nQuotient is {solution[0]} \nRemainder is {solution[1]}\n")
+
+# Check callable or not
+print("a. To Check whether the function is callable or not:")
+call=callable(divmod)
+print(call,end="")
+if call == True:
+    print(", Hence it is callable")
+else:
+    print(", Hence it is not callable")
+
+# Cheking zero value 
+if(solution[1]==0):
+    if(solution[0]==0):
+        print("b. Both values are zero")
+    else:
+        print("b. One value is zero")
+else:
+    if(solution[0]==0):
+        print("b. One value is zero")
 print()
 
-# remainder and quotient
-rem=n1%n2
-quot=int(n1/n2)
+# Filter value greater than 4
+print("c. Filterd Values are")
+allvalues=solution+(4,5,6)
+filteredvalues=sorted(list(i for i in allvalues if i>4))
+for i in filteredvalues:
+    print(i,end=" ")
+print()
 
-print("Quotient: %d" %quot)
-print("Remainder: %d\n" %rem)
+# Converting to set datatype
+print("\nd. Output in set Data type is",end=" ")
+setdata = set(filteredvalues)
+print(setdata)
 
-# Callable value
-print("a. The quotient and reminder are a callable values.")
-print(callable(quot))
-print(callable(rem))
+# Making set immutable
+immutableset=frozenset(setdata)
+print("e. Immutable set:",immutableset)
 
-print("b. ",end="")
-# Cheking zero value 
-if(rem==0):
-    if(quot==0):
-        print("Both values are zero")
-    else:
-        print("One value is zero")
-else:
-    if(quot==0):
-        print("One value is zero")
-
-# Set
-print("c. Filterd Values")
-reqset=set()
-for i in range (4,7):
-    newrem=rem+i
-    newquot=quot+i
-
-    if(newrem>4):
-        reqset.add(newrem)
-    if(newquot>4):
-        reqset.add(newquot)
-print(reqset)
-
-immutableset=frozenset(reqset)
-print("d. Immutable set:",immutableset)
-
+# Finding maximum value and converting it into hash
 maximum=max(immutableset)
-print("e. Maximum value in set is %d" %maximum)
-print("f. Hash value: ", hash(maximum))
+print("f. Maximum value in set is %d" %maximum)
+print("   Hash value: ", hash(maximum))
 
 
 print('--------------------Question-4---------------------')

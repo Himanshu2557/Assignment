@@ -31,21 +31,23 @@ Enter Number of rows: 8
    1   7   21   35   35   21   7   1   
 
 --------------------Question-3---------------------
-Enter FIRST INTEGER: 10
-Enter SECOND INTEGER: 2
+Enter First Integer: 10
+Enter Second Integer: 2
 
-Quotient: 5
-Remainder: 0
+Quotient is 5 
+Remainder is 0
 
-a. The quotient and reminder are a callable values.
-False
-False
+a. To Check whether the function is callable or not:
+True, Hence it is callable
 b. One value is zero
-c. Filterd Values
-{5, 6, 9, 10, 11}
-d. Immutable set: frozenset({5, 6, 9, 10, 11})
-e. Maximum value in set is 11
-f. Hash value:  11
+
+c. Filterd Values are
+5 5 6 
+
+d. Output in set Data type is {5, 6}
+e. Immutable set: frozenset({5, 6})
+f. Maximum value in set is 6
+   Hash value:  6
 
 --------------------Question-4---------------------
 Object created
