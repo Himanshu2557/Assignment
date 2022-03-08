@@ -1,40 +1,43 @@
-#QUESTION1
-from tkinter import*
-#Function for finding gst rate
-def find_gst():
-    org_cost=int(org_priceField.get())
-    net_cost=int(net_priceField.get())
-    gst_rate=((net_cost - org_cost) * 100) / org_cost
-    print("the original cost is: ",org_cost)
-    print("the net cost is : ",net_cost)
-    print("the gst rate is : ",gst_rate)
-    gst_rateField.insert(12, str(gst_rate) + "%")
-
-#function for clearing all the enteries
-def clear_all():
-    org_priceField.delete(0,END)
-    net_priceField.delete(0,END)
-    gst_rateField.delete(0,END)
-
-#driver code
+from tkinter import *
+from tkinter import messagebox
 win=Tk()
-win.configure(background='light blue')
-win.geometry('500x500')
-win.title("GST RATE FINDER")
-lbl_1=Label(win,text='ENTER ORIGINAL PRICE',bg='red',relief='ridge',padx=3,pady=3,bd=3,font=('calibre',14,'bold','underline'))
-lbl_1.grid(row=1,column=1,padx=10,pady=10)
-lbl_2=Label(win,text="ENTER NET PRICE",bg='red',relief='ridge',padx=3,pady=3,bd=3,font=('calibre',14,'bold','underline'))
-lbl_2.grid(row=2,column=1,padx=10,pady=10)
-but_1=Button(win,text="Calculate",padx=3,pady=3,bg='light grey',relief='sunken',bd=3,font=('calibre',14),command=find_gst,activebackground='red')
-but_1.grid(row=3,column=2,padx=10,pady=10)
-lbl_3=Label(win,text="GST RATE IS",bg='red',relief='ridge',padx=3,pady=3,bd=3,font=('calibre',14,'bold','underline'))
-lbl_3.grid(row=4,column=1,padx=10,pady=10)
-but_2=Button(win,text="Clear",padx=3,pady=3,bg='light grey',relief='sunken',bd=3,font=('calibre',14),command=clear_all,activebackground='red')
-but_2.grid(row=5,column=2,padx=10,pady=10)
-org_priceField=Entry(win)
-org_priceField.grid(row=1,column=2,padx=10,pady=10)
-net_priceField=Entry(win)
-net_priceField.grid(row=2,column=2,padx=10,pady=10)
-gst_rateField=Entry(win)
-gst_rateField.grid(row=4,column=2,padx=10,pady=10)
+Label_1=Label(win,text='GST Tax Finder Calculator',bg='red',font=('Algerian',20))
+Label_1.pack()
+Label_2=Label(win,text='Enter Orignal Cost(+ Rational no.) : ',font=('Arial black',10))
+Label_2.place(x=15,y=60)
+Entry_1=Entry(win,width='20')
+Entry_1.place(x=270,y=60)
+Label_3=Label(win,text='Enter Net Price(+ Rational no.) : ',font=('Arial black',10))
+Label_3.place(x=35,y=100)
+Entry_2=Entry(win,width='20')
+Entry_2.place(x=270,y=100)
+Label_4=Label(win,text='GST (in %) : ',font=('Arial black',10))
+Label_4.place(x=175,y=140)
+def myclick():
+    global Answer
+    if(Entry_1.get()=='' or Entry_2.get()=='' or float(Entry_1.get())<0 or float(Entry_2.get())<0):
+        messagebox.showwarning("Invalid input", "Enter all valid inputs (Can't zero or negative)")
+        return
+    Net_price=float(Entry_2.get())
+    Orignal_cost=float(Entry_1.get())
+    if(Orignal_cost==0):
+        messagebox.showwarning("Invalid Original Cost", "Can't Zero or negative")
+        return
+    GST=(Net_price-Orignal_cost)*100/Orignal_cost
+    if(GST<0):
+        messagebox.showinfo("Invalid GST", "GST can't be in negative")
+        return
+    Answer=Label(win,text=str(GST))
+    Answer.place(x=270,y=140)
+    Answer_but['state']=DISABLED
+    New_but['state']=NORMAL
+def newinput():
+    Answer_but['state']=NORMAL
+    New_but['state']=DISABLED
+    Answer.destroy()
+Answer_but=Button(win,text='Calculate GST',font=('Arial black',10),bg='blue',command=myclick,activebackground='yellow',activeforeground='red')
+Answer_but.place(x=220,y=180)
+New_but=Button(win,text='New Input',font=('Arial black',10),bg='red',command=newinput,activebackground='yellow',activeforeground='red')
+New_but.place(x=120,y=180)
+New_but['state']=DISABLED
 win.mainloop()

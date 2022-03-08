@@ -2,6 +2,7 @@ from tkinter import *
 cal=Tk()
 cal.geometry("345x250")
 cal.title("CALCULATOR")
+cal.config(bg="#2C2F35")
 # cal.config(bg="white")
 
 def click(event):
